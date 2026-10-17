@@ -1,6 +1,6 @@
 package org.test.practicaevaluadacorte2.model;
 
-public class producto {
+public class Producto {
 
     private Integer idProducto;
     private String codigo;
@@ -9,10 +9,10 @@ public class producto {
     private Double precio;
     private int stock;
 
-    public producto() {
+    public Producto() {
     }
 
-    public producto(Integer idProducto, int stock, Double precio, String nombre, String codigo, String categoria) {
+    public Producto(Integer idProducto, int stock, Double precio, String nombre, String codigo, String categoria) {
         this.idProducto = idProducto;
         this.stock = stock;
         this.precio = precio;

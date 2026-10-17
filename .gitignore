@@ -37,3 +37,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Configuración local de la BD ###
+# Contiene la contraseña real; solo se versiona db.properties.example
+db.properties

@@ -1,0 +1,9 @@
+# Archivo de EJEMPLO de configuración (sin datos secretos).
+# Para ejecutar el proyecto:
+#   1. Copiar este archivo y renombrar la copia a db.properties
+#   2. Reemplazar los valores por los de su servidor PostgreSQL local
+# db.properties está excluido del repositorio mediante .gitignore.
+
+db.url=jdbc:postgresql://localhost:5432/papeleria_campus
+db.user=postgres
+db.password=Cambiala_por_tu_contraseña

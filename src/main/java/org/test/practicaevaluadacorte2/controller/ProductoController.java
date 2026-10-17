@@ -110,6 +110,4 @@ public class ProductoController {
     @FXML
     private void onRecargar() {
     }
-
-
 }

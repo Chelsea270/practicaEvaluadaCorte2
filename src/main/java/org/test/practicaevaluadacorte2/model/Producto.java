@@ -1,24 +1,28 @@
 package org.test.practicaevaluadacorte2.model;
 
+import java.math.BigDecimal;
+
 public class Producto {
 
     private Integer idProducto;
     private String codigo;
     private String nombre;
     private String categoria;
-    private Double precio;
+    private BigDecimal precio;
     private int stock;
 
     public Producto() {
     }
 
-    public Producto(Integer idProducto, int stock, Double precio, String nombre, String codigo, String categoria) {
+    public Producto(Integer idProducto, String codigo, String nombre,
+                    String categoria, BigDecimal precio, int stock)
+    {
         this.idProducto = idProducto;
-        this.stock = stock;
-        this.precio = precio;
-        this.nombre = nombre;
         this.codigo = codigo;
+        this.nombre = nombre;
         this.categoria = categoria;
+        this.precio = precio;
+        this.stock = stock;
     }
 
     public Integer getIdProducto() {
@@ -29,28 +33,12 @@ public class Producto {
         this.idProducto = idProducto;
     }
 
-    public int getStock() {
-        return stock;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -61,11 +49,28 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public BigDecimal getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(BigDecimal precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }
+

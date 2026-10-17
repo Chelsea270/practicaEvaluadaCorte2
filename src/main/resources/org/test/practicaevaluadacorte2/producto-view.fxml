@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="640.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.test.practicaevaluadacorte2.controller.ProductoController">
+    <children>
+        <Label layoutX="24.0" layoutY="14.0" text="Catálogo de Productos — Papelería Campus">
+            <font><Font name="System Bold Italic" size="21.0" /></font>
+        </Label>
+
+        <!-- Formulario -->
+        <Label layoutX="24.0" layoutY="60.0" text="ID" />
+        <TextField fx:id="txtId" editable="false" focusTraversable="false" layoutX="95.0" layoutY="56.0" prefHeight="26.0" prefWidth="180.0" />
+
+        <Label layoutX="24.0" layoutY="94.0" text="Código" />
+        <TextField fx:id="txtCodigo" layoutX="95.0" layoutY="90.0" prefWidth="180.0" />
+        <Label layoutX="300.0" layoutY="94.0" text="Nombre" />
+        <TextField fx:id="txtNombre" layoutX="370.0" layoutY="90.0" prefWidth="240.0" />
+
+        <Label layoutX="24.0" layoutY="128.0" text="Categoría" />
+        <ComboBox fx:id="cmbCategoria" layoutX="95.0" layoutY="124.0" prefWidth="180.0" promptText="Seleccione" />
+        <Label layoutX="300.0" layoutY="128.0" text="Precio" />
+        <TextField fx:id="txtPrecio" layoutX="370.0" layoutY="124.0" prefWidth="100.0" />
+        <Label layoutX="485.0" layoutY="128.0" text="Stock" />
+        <TextField fx:id="txtStock" layoutX="530.0" layoutY="124.0" prefWidth="80.0" />
+
+        <!-- Botones CRUD -->
+        <Button fx:id="btnNuevo" layoutX="24.0" layoutY="166.0" onAction="#onNuevo" style="-fx-background-color: #FFF0F5;" text="Nuevo" />
+        <Button fx:id="btnGuardar" layoutX="150.0" layoutY="166.0" onAction="#onGuardar" style="-fx-background-color: #FFF0F5;" text="Guardar" />
+        <Button fx:id="btnActualizar" layoutX="225.0" layoutY="166.0" onAction="#onActualizar" style="-fx-background-color: #FFF0F5;" text="Actualizar" />
+        <Button fx:id="btnEliminar" layoutX="310.0" layoutY="166.0" onAction="#onEliminar" style="-fx-background-color: #FFF0F5;" text="Eliminar" />
+
+        <Separator layoutX="4.0" layoutY="210.0" prefWidth="632.0" />
+
+        <!-- Búsqueda y filtros -->
+        <Label layoutX="24.0" layoutY="220.0" text="Búsqueda">
+            <font><Font name="System Bold Italic" size="15.0" /></font>
+        </Label>
+
+        <Label layoutX="24.0" layoutY="256.0" text="Nombre o código" />
+        <TextField fx:id="txtBuscar" layoutX="130.0" layoutY="252.0" prefWidth="200.0" />
+        <Label layoutX="350.0" layoutY="256.0" text="Categoría" />
+        <ComboBox fx:id="cmbFiltroCategoria" layoutX="420.0" layoutY="252.0" prefWidth="190.0" />
+
+        <CheckBox fx:id="chkConExistencias" layoutX="24.0" layoutY="292.0" text="Solo con existencias" />
+
+        <Button fx:id="btnBuscar" layoutX="24.0" layoutY="326.0" onAction="#onBuscar" style="-fx-background-color: #FFF0F5;" text="Buscar" />
+        <Button fx:id="btnLimpiarFiltros" layoutX="90.0" layoutY="326.0" onAction="#onLimpiarFiltros" style="-fx-background-color: #FFF0F5;" text="Limpiar filtros" />
+        <Button fx:id="btnRecargar" layoutX="200.0" layoutY="326.0" onAction="#onRecargar" style="-fx-background-color: #FFF0F5;" text="Recargar" />
+
+        <!-- Tabla -->
+        <TableView fx:id="tblProductos" layoutX="24.0" layoutY="366.0" prefHeight="280.0" prefWidth="592.0" style="-fx-background-color: #FFFAFA;">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="colCodigo" prefWidth="70.0" text="Código" />
+                <TableColumn fx:id="colNombre" prefWidth="190.0" text="Nombre" />
+                <TableColumn fx:id="colCategoria" prefWidth="105.0" text="Categoría" />
+                <TableColumn fx:id="colPrecio" prefWidth="90.0" text="Precio" />
+                <TableColumn fx:id="colStock" prefWidth="70.0" text="Stock" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="lblContador" layoutX="24.0" layoutY="658.0" text="Registros: 0" />
+    </children>
+</AnchorPane>
